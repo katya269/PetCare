@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img class="imgNav" src="./img/logo.png" alt="Logo">
+            </a>
+
+
+            <form class="d-flex search-form">
+                <input class="form-control" type="search" placeholder="Buscar...">
+            </form>
+
+            <div class="navbar-nav d-none d-lg-flex">
+                <a class="nav-link" href="/ExpoV/index.html" data-i18n="nav_home">Home</a>
+                <a class="nav-link" href="./productos.html" data-i18n="nav_products">Products</a>
+                <a class="nav-link" href="./PetCare/contact.html" data-i18n="nav_contact">Contact</a>
+                <a class="nav-link" href="#"data-i18n="aboutus">About Us</a>
+            </div>
+
+            <div class="header-icons">
+
+                <div class="user-icon">
+                    <i class="fa-regular fa-circle-user"></i>
+                </div>
+
+                <div class="settings-menu-wrapper">
+                    <div class="settings-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+
+                    <div class="dropdown-menu-custom">
+                        <a href="./setting.html" class="dropdown-item-custom" data-i18n="nav_settings">
+                            <i class="fa-solid fa-sliders"></i> Settings
+                        </a>
+
+                        <a href="#" class="dropdown-item-custom" id="openLanguageModal" >
+        <i class="fa-solid fa-language"></i> 
+        <span class="me-auto" data-i18n="nav_language">Language</span>
+        <span id="current-flag" class="current-flag">
+            <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="nav-flag-img">
+        </span>
+    </a>
+                        
+                        <div class="dropdown-item-custom toggle-container">
+                            <button id="theme-toggle-btn" class="nav-link" style="background: none; border: none; cursor: pointer; font-size: 1.2rem;">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        
+                        <a href="#" class="dropdown-item-custom" data-i18n="nav_accessibility">
+                            <i class="fa-solid fa-universal-access"></i> Accessibility
+                        </a>
+                    </div>
+                </div>
+                <div class="cart-icon position-relative">
+                    <a href="carrito.html" >
+                        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-bubble">0</span>
+                    </a>
+                </div>
+
+            </div>
+    </nav>
+
+    <section class="hero-contact">
+    <div class="hero-text">
+        <span class="hero-tag">🐾 Contact PetCare</span>
+
+        <h1>We're Here For You And Your Best Friend</h1>
+
+        <p>
+            Whether you have questions about our products,
+            need assistance with an order, or simply want
+            advice for your furry friend, our team is happy
+            to help.
+        </p>
+
+        <a href="#contactForm" class="hero-btn">
+            Contact Us
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img src="img/pets.jpg" alt="Cute pets sitting together">
+    </div>
+</section>
+
+    <main>
+
+        <div id="left-column">
+
+            <div id="mayordiv">
+                <h3 id="contacto">Contact</h3>
+                <h1 id="estamos">We are here to help you</h1>
+                <h4>Do you have any question, recommendation or need assistance? <br> Fill out the form and we'll contact you as soon as possible.</h4>
+            </div>
+
+            <div id="menordiv">
+                
+                <form id="contactForm">
+
+                    <input type="text" placeholder="Name" id="namein" required minlength="8" name="Name">
+
+                    <input type="email" placeholder="Email" id="emailin" required name="Email">
+
+                    <input type="text" placeholder="Subject" id="subjectin" required name="Subject">
+
+                    <textarea placeholder="Message" id="messagein" required minlength="10" name="Message"></textarea>
+
+                    <button type="submit" id="submitin">Send Message</button>
+
+                </form>
+
+            </div>
+        </div>
+
+        <div id="menormenordiv">
+            
+            <h3 id="masformasde">More ways to contact us</h3>
+
+            <div>
+
+                <img src="img/phonelogo.png" alt="Phone logo">
+
+                <h5 class="h5deformas">+503 1234-5678</h5>
+
+            </div>
+
+            <div>
+
+                <img src="img/logomail.png" alt="Email Logo">
+
+                <h5 class="h5deformas">petcaresv@gmail.com</h5>
+
+            </div>
+
+            <div>
+
+                <img src="img/iglogo.png" alt="Instagram Logo">
+
+                <h5 class="h5deformas">petcare_sv</h5>
+
+            </div>
+
+            <h3 id="contestamos">We are available Monday through Friday from 8:00 AM to 4:00 PM.</h3>
+        
+        </div>
+
+    </main>
+
+    <footer class="petcare-footer">
+        <div class="footer-container">
+        
+            <div class="footer-logo-row">
+                <img src="./img/logopetcare.jpg" alt="Pet Care Logo Footer" class="footer-logo-img">
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-columns">
+            
+                <div class="footer-col">
+                    <h3>Cóntactanos</h3>
+                    <p>Call Center: 0000-0000</p>
+                    <p class="brand-text">"petcare.com" es una marca de ventas registrado.</p>
+                    <p>Dirección: Prolongación 59 AV Sur y calle El Progreso 2934.</p>
+                    <p>Correo: <a href="mailto:servicioalcliente@petcare.com.sv">servicioalcliente@petcare.com.sv</a></p>
+                    <p>NIT: 0614-110169-001-1</p>
+                    <p class="copyright">Derechos Reservados 2026 Petcare S.A de C.V.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Uso y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Derechos y obligaciones de los clientes</a></li>
+                        <li><a href="#">Garantía de los productos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Cómo comprar</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contáctenos</a></li>
+                        <li><a href="#">Sucursales</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col center-align">
+                    <h3>Nuestras redes sociales</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - PetCare</title>
+    <link rel="stylesheet" href="./CSS/productos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            <img class="imgNav" src="./img/logo.png" alt="Logo">
+        </a>
+
+
+        <form class="d-flex search-form">
+            <input class="form-control" type="search" placeholder="Buscar...">
+        </form>
+
+        <div class="navbar-nav d-none d-lg-flex">
+            <a class="nav-link" href="./ExpoV/home.html" data-i18n="nav_home">Home</a>
+            <a class="nav-link" href="./productos.html" data-i18n="nav_products">Products</a>
+            <a class="nav-link" href="./PetCare/contact.html" data-i18n="nav_contact">Contact</a>
+            <a class="nav-link" href="#"data-i18n="aboutus">About Us</a>
+        </div>
+
+        <div class="header-icons">
+
+            <div class="user-icon">
+                <i class="fa-regular fa-circle-user"></i>
+            </div>
+
+            <div class="settings-menu-wrapper">
+                <div class="settings-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+
+                <div class="dropdown-menu-custom">
+                    <a href="./generalSetting.html" class="dropdown-item-custom" data-i18n="nav_settings">
+                        <i class="fa-solid fa-sliders"></i> Settings
+                    </a>
+
+                    <a href="#" class="dropdown-item-custom" id="openLanguageModal" >
+    <i class="fa-solid fa-language"></i> 
+    <span class="me-auto" data-i18n="nav_language">Language</span>
+    <span id="current-flag" class="current-flag">
+        <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="nav-flag-img">
+    </span>
+</a>
+                    
+                    <div class="dropdown-item-custom toggle-container">
+                        <button id="theme-toggle-btn" class="nav-link" style="background: none; border: none; cursor: pointer; font-size: 1.2rem;">
+    <i class="fa-solid fa-moon"></i>
+</button>
+                        <label class="switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <a href="./accessibility.html" class="dropdown-item-custom" data-i18n="nav_accessibility">
+                        <i class="fa-solid fa-universal-access"></i> Accessibility
+                    </a>
+                </div>
+            </div>
+            <div class="cart-icon position-relative">
+                <a href="carrito.html" >
+                    <i class="fa-solid fa-cart-shopping"></i>
+    <span class="cart-bubble">0</span>
+                </a>
+            </div>
+
+        </div>
+</nav>
+
+<div class="collapse d-lg-none" id="navbarNav">
+
+    <div class="mobile-menu">
+
+        <a href="#" data-i18n="nav_home">Home</a>
+        <a href="./productos.html" data-i18n="nav_products">Products</a>
+        <a href="./PetCare/contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="#" data-i18n="nav_aboutus">About Us</a>
+
+    </div>
+
+</div>
+
+
+    <!--img responsive-->
+    <img src="./img/productos-us.png"  id="imgProductos" class="img-fluid" alt="...">
+
+        <!--Products-->
+<div class="container-fluid contenido-productos">
+    <div class="products">
+    <h1 data-i18n="products_title">Products</h1>
+    <p data-i18n="products_text">At PetCare, we know your pets are family. That's why we've handpicked the best nutrition, the most entertaining toys, and the safest accessories to support them through every stage of life. Explore our collection and give your furry friend the premium quality they deserve.</p>
+    <hr>
+    </div>
+    <div class="Filters">
+
+    <h3 data-i18n="products_filter">Filter by:</h3>
+
+    <!-- Color -->
+    <div class="dropdown">
+        <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="filter_category" aria-haspopup="true" aria-expanded="false" aria-label="Filter by Category">
+            Category
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="categoryBtn">
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="all" data-i18n="filter_all">All Categories</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="food" data-i18n="filter_food">Food</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="accessories" data-i18n="filter_accessories">Accessories</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="walk" data-i18n="filter_walk">Walk</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="bed" data-i18n="filter_bed">Beds</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="toys" data-i18n="filter_toys">Toys</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="luggage" data-i18n="filter_luggage">Luggage</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="category" data-value="hygiene" data-i18n="filter_hygiene">Hygiene</a></li>
+        </ul>
+    </div>
+
+    <!-- Availability -->
+    <div class="dropdown">
+        <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="filter_Availability">
+            Availability
+        </a>
+
+        <ul class="dropdown-menu">
+    <li><a class="dropdown-item filter-btn" href="#" data-type="availability" data-value="all" data-i18n="filter_all">All</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="availability" data-value="in-stock" data-i18n="filter_inStock">In Stock</a></li>
+    <li><a class="dropdown-item filter-btn" href="#" data-type="availability" data-value="out-of-stock" data-i18n="filter_outStock">Out of Stock</a></li>
+        </ul>
+    </div>
+
+    <!-- Price -->
+    <div class="dropdown">
+        <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="filter_Price">
+            Price
+        </a>
+
+        <ul class="dropdown-menu">
+    <li><a class="dropdown-item sort-btn" href="#" data-sort="default" data-i18n="filter_default">Default</a></li>
+    <li><a class="dropdown-item sort-btn" href="#" data-sort="low-high" data-i18n="filter_LowHigh">Low to High</a></li>
+    <li><a class="dropdown-item sort-btn" href="#" data-sort="high-low" data-i18n="filter_HighLow">High to Low</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="floating-cart"><i class="fa-solid fa-cart-shopping"></i></div>
+
+    <!--Cards-->
+    <div class="cards">
+            <div id="no-results-msg" class="empty-state-animated" style="display: none;">
+                    <i class="fa-solid fa-box-open empty-icon"></i>
+                    <h3 data-i18n="GreatNews">Great news! </h3>
+                    <p data-i18n="NewsProducts">All of our products are currently in stock and ready for your pet.</p>
+            </div>
+            
+                <div class="row gx-5 gy-5">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="toys" data-availability="in-stock" data-price="12.99">
+                    <div class="card h-100">
+                        <img src="./img/juguetes.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">3-Pack Bone Chew Toys</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$12.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+
+                    <!--aca-->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="bed" data-availability="in-stock" data-price="24.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/cama/13.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Plush Donut Pet Bed</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$24.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="accessories" data-availability="in-stock" data-price="59.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/accesories/27.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Smart Automatic Pet Feeder</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$59.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="accessories" data-availability="in-stock" data-price="34.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/accesories/28.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Stainless Steel Pet Water Fountain</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$34.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="accessories" data-availability="in-stock" data-price="49.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/accesories/29.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Automatic Dry Food Dispenser</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$49.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="accessories" data-availability="in-stock" data-price="29.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/accesories/31.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Filtered Pet Water Fountain</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$29.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="accessories" data-availability="in-stock" data-price="14.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/accesories/9.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Durable Rubber Chew Toy</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$14.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="bed" data-availability="in-stock" data-price="45.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/cama/14.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Orthopedic Dog Bed</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$45.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="bed" data-availability="in-stock" data-price="22.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/cama/15.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Cat Cave Tent Bed</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$22.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="bed" data-availability="in-stock" data-price="35.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/cama/16.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Rectangular Bolster Pet Bed</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$35.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="bed" data-availability="in-stock" data-price="26.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/cama/17.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Hooded Fluffy Cat Bed</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$26.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="bed" data-availability="in-stock" data-price="15.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/cama/18.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Soft Fleece Pet Blanket</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$15.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="bed" data-availability="in-stock" data-price="28.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/cama/19.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Calming Oval Pet Bed</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$28.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="toys" data-availability="in-stock" data-price="8.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/diversion/10.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Feather Teaser Cat Wand</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$8.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="toys" data-availability="in-stock" data-price="18.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/diversion/11.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Sisal Scratching Ball</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$18.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="toys" data-availability="in-stock" data-price="25.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/diversion/12.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Interactive Wood Scratching Ball</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$25.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="toys" data-availability="in-stock" data-price="19.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/diversion/40.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Basic Sisal Scratching Post</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$19.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="toys" data-availability="in-stock" data-price="24.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/diversion/44.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Scratching Post with Dangling Ball</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$24.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="toys" data-availability="in-stock" data-price="10.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/diversion/8.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Heavy Duty Rope Toy</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$10.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="luggage" data-availability="in-stock" data-price="39.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/equipaje/38.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Hard-Sided Pet Carrier</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$39.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="luggage" data-availability="in-stock" data-price="34.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/equipaje/39.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Breathable Pet Carrier Backpack</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$34.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="luggage" data-availability="in-stock" data-price="55.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/equipaje/41.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Folding Wire Dog Crate</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$55.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="luggage" data-availability="in-stock" data-price="42.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/equipaje/42.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Travel Pet Carrier (Brown)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$42.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="luggage" data-availability="in-stock" data-price="42.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/equipaje/43.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Expandable Pet Carrier Backpack</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$49.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="luggage" data-availability="in-stock" data-price="65.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/equipaje/45.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Heavy Duty Wire Crate</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$65.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="food" data-availability="in-stock" data-price="45.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/food/1.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Premium Dry Dog Food (15 lbs)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$45.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="food" data-availability="in-stock" data-price="22.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/food/2.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Grain-Free Dry Cat Food (5 lbs)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$22.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="food" data-availability="in-stock" data-price="28.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/food/3.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Canned Dog Food Variety Pack (12 Cans)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$28.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="food" data-availability="in-stock" data-price="4.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/food/4.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Cat Treats - Chicken Flavor (50g) - $4.99</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$4.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="food" data-availability="in-stock" data-price="32.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/food/5.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">VetStar Dry Cat Food (10 lbs)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$32.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="food" data-availability="in-stock" data-price="26.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/food/6.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Wet Dog Food Multi-Pack</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$26.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="food" data-availability="in-stock" data-price="6.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/food/7.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Liquid Cat Treats / Puree Tubes</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$6.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="hygiene" data-availability="in-stock" data-price="14.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/higiene/30.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Oatmeal Pet Shampoo (16 oz)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$14.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="hygiene" data-availability="in-stock" data-price="12.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/higiene/32.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Professional Pet Nail Clippers</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$12.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="hygiene" data-availability="in-stock" data-price="16.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/higiene/33.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Double-Sided Grooming Brush</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$16.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="hygiene" data-availability="in-stock" data-price="9.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/higiene/34.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Basic Pet Dental Care Kit</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$9.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="hygiene" data-availability="in-stock" data-price="8.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/higiene/35.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Finger Toothbrush & Paste Set</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$8.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="hygiene" data-availability="in-stock" data-price="15.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/higiene/36.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Self-Cleaning Slicker Brush</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$15.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="hygiene" data-availability="in-stock" data-price="11.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/higiene/37.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Advanced Pet Toothpaste Set</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$11.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="walk" data-availability="in-stock" data-price="22.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/paseos/20.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Reflective No-Pull Dog Harness</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$22.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="walk" data-availability="in-stock" data-price="10.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/paseos/21.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Standard Nylon Dog Leash (6 ft)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$10.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="walk" data-availability="in-stock" data-price="9.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/paseos/22.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Adjustable Nylon Dog Collar</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$9.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="walk" data-availability="in-stock" data-price="18.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/paseos/23.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Retractable Dog Leash (16 ft)</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$18.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-card" data-category="walk" data-availability="in-stock" data-price="24.99">
+                    <div class="card h-100">
+                        <img src="./img/productos-img/paseos/24.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Breathable Mesh Dog Harness</h5>
+                            <div class="rating">
+                            <div class="stars">
+                                <div class="stars-bg">★★★★★</div>
+                                <div class="stars-fill">★★★★★</div>
+                            </div>
+                            <span class="reviews">(21)</span>
+                            </div>
+                            <p class="price">$24.99</p>
+                            <div class="btnCard w-100">
+                            <a href="#" class="btn btn-primary add-to-cart-btn">Add</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Footer-->
+
+<footer class="petcare-footer">
+    <div class="footer-container">
+       
+        <div class="footer-logo-row">
+            <img src="./img/logo.png" alt="Pet Care Logo Footer" class="footer-logo-img">
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-columns">
+           
+            <div class="footer-col">
+                <h3>Cóntactanos</h3>
+                <p>Call Center: 0000-0000</p>
+                <p class="brand-text">"petcare.com" es una marca de ventas registrado.</p>
+                <p>Dirección: Prolongación 59 AV Sur y calle El Progreso 2934.</p>
+                <p>Correo: <a href="mailto:servicioalcliente@petcare.com.sv">servicioalcliente@petcare.com.sv</a></p>
+                <p>NIT: 0614-110169-001-1</p>
+                <p class="copyright">Derechos Reservados 2026 Petcare S.A de C.V.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Uso y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Derechos y obligaciones de los clientes</a></li>
+                    <li><a href="#">Garantía de los productos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Cómo comprar</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="#">Sucursales</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col center-align">
+                <h3>Nuestras redes sociales</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<div id="languageModal" class="custom-modal">
+    <div class="modal-content-custom">
+        <div class="modal-header-custom">
+            <h5>Select Language / Idioma</h5>
+            <button id="closeLanguageModal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body-custom">
+            <div class="language-options">
+                <button class="lang-option active" data-lang="en" data-flag-src="https://flagcdn.com/w40/gb.png">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="flag-img"> English (UK)
+                </button>
+                <button class="lang-option" data-lang="es" data-flag-src="https://flagcdn.com/w40/es.png">
+                    <img src="https://flagcdn.com/w40/es.png" alt="ES" class="flag-img"> Español (ES)
+                </button>
+                <button class="lang-option" data-lang="fr" data-flag-src="https://flagcdn.com/w40/fr.png">
+                    <img src="https://flagcdn.com/w40/fr.png" alt="FR" class="flag-img"> Français (FR)
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="toast-notificacion" class="toast-custom">
+    <i class="fa-solid fa-circle-check"></i> Producto agregado al carrito
+</div>
+
+<div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+
+<script src="/js/languague.js"></script>
+<script src="/js/changeLanguage.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/AddCart.js"></script>
+<script src="/js/filterBy.js"></script>
+<script src="/js/FilterByPrice.js"></script>
+<script src="/js/Accessibility.js"></script>
+<script src="/js/lector.js"></script>
+<script src="/js/Dropdown.js"></script>
+<script src="/js/DarkMode.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - PetCare</title>
+
+    <link rel="stylesheet" href="./CSS/productos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--NavBar-->
+<nav class="top-header">
+    <div class="container">
+        <div class="logo-box">
+            <a class="navbar-brand" href="#">
+                <img class="imgNav" src="./img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="header-info">
+            <div class="info-box">
+                <i class="fa-solid fa-truck"></i>
+                <div>
+                    <h6>Free & Secure Delivery</h6>
+                    <small>On all orders.</small>
+                </div>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-truck"></i>
+                <div>
+                    <h6>Guaranteed Delivery</h6>
+                    <small>Replacement for any issue.</small>
+                </div>
+            </div>
+        </div>
+        <div class="user-icon">
+            <i class="fa-regular fa-circle-user"></i>
+        </div>
+    </div>
+</nav>
+
+    <!--Carrito de Compras-->
+
+<section id="contenedorCarrito">
+    <section id="carrito">
+        <a href="./productos.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Products</span>
+        </a>
+        <div class="InfoCar">
+            <h1>Shopping Cart</h1>
+        </div>
+        
+        <div id="cart-items-container"></div>
+
+    </section>
+
+    <section id="metodoPago">
+        <div class="Pago">
+            <h3>Order Summary</h3>
+            <p class="totalPago">Total: <b id="cart-total-price">$0.00</b></p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="btnPago">
+            <button>Proceed to Checkout</button>
+        </div>
+
+        <div class="checkout-info">
+            </div>
+    </section>
+</section>
+
+    <!--Footer-->
+
+<footer class="petcare-footer">
+    <div class="footer-container">
+       
+        <div class="footer-logo-row">
+            <img src="./img/logo.png" alt="Pet Care Logo Footer" class="footer-logo-img">
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-columns">
+           
+            <div class="footer-col">
+                <h3>Cóntactanos</h3>
+                <p>Call Center: 0000-0000</p>
+                <p class="brand-text">"petcare.com" es una marca de ventas registrado.</p>
+                <p>Dirección: Prolongación 59 AV Sur y calle El Progreso 2934.</p>
+                <p>Correo: <a href="mailto:servicioalcliente@petcare.com.sv">servicioalcliente@petcare.com.sv</a></p>
+                <p>NIT: 0614-110169-001-1</p>
+                <p class="copyright">Derechos Reservados 2026 Petcare S.A de C.V.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Uso y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Derechos y obligaciones de los clientes</a></li>
+                    <li><a href="#">Garantía de los productos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Cómo comprar</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="#">Sucursales</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col center-align">
+                <h3>Nuestras redes sociales</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<script src="/js/languague.js"></script>
+<script src="/js/changeLanguage.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/AddCart.js"></script>
+<script src="/js/filterBy.js"></script>
+<script src="/js/FilterByPrice.js"></script>
+<script src="/js/Accessibility.js"></script>
+<script src="/js/lector.js"></script>
+<script src="/js/Dropdown.js"></script>
+<script src="/js/DarkMode.js"></script>
+
+</body>
+</html>

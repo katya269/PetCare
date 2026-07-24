@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiénes Somos - PetCare</title>
+
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            <img class="imgNav" src="img/logo-paw.png" alt="Logo">
+        </a>
+
+        <form class="d-flex search-form">
+            <input class="form-control" type="search" placeholder="Buscar...">
+        </form>
+
+        <div class="navbar-nav d-none d-lg-flex">
+            <a class="nav-link" href="#" data-i18n="nav_home">Inicio</a>
+            <a class="nav-link" href="./productos.html" data-i18n="nav_products">Productos</a>
+            <a class="nav-link" href="./PetCare/contact.html" data-i18n="nav_contact">Contacto</a>
+            <a class="nav-link" href="#" data-i18n="aboutus">Quienes Somos</a>
+        </div>
+
+        <div class="header-icons">
+
+            <div class="user-icon">
+                <i class="fa-regular fa-circle-user"></i>
+            </div>
+
+            <div class="settings-menu-wrapper">
+                <div class="settings-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+
+                <div class="dropdown-menu-custom">
+                    <a href="./setting.html" class="dropdown-item-custom" data-i18n="nav_settings">
+                        <i class="fa-solid fa-sliders"></i> Configuración
+                    </a>
+
+                    <a href="#" class="dropdown-item-custom" id="openLanguageModal">
+                        <i class="fa-solid fa-language"></i>
+                        <span class="me-auto" data-i18n="nav_language">Idioma</span>
+                        <span id="current-flag" class="current-flag">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="nav-flag-img">
+                        </span>
+                    </a>
+
+                    <div class="dropdown-item-custom toggle-container">
+                        <button id="theme-toggle-btn" class="nav-link" style="background: none; border: none; cursor: pointer; font-size: 1.2rem;">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                        <label class="switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <a href="#" class="dropdown-item-custom" data-i18n="nav_accessibility">
+                        <i class="fa-solid fa-universal-access"></i> Accesibilidad
+                    </a>
+                </div>
+            </div>
+            <div class="cart-icon position-relative">
+                <a href="carrito.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-bubble">0</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ============ HERO: QUIENES SOMOS ============ -->
+<section class="hero-somos">
+    <div class="container-fluid hero-somos-inner">
+        <div class="hero-text">
+            <h1>QUIENES SOMOS</h1>
+            <p>En Pet Care nos dedicamos a brindar una experiencia innovadora y accesible para el
+            cuidado de las mascotas, fortaleciendo la relación entre humanos y animales por
+            medio de la tecnología. Nuestro objetivo es ofrecer soluciones modernas, seguras y
+            confiables que ayuden al bienestar y felicidad de cada mascota.</p>
+        </div>
+        <div class="hero-img">
+            <img src="img/about-hero.png" alt="Mascotas PetCare">
+        </div>
+    </div>
+</section>
+
+<!-- ============ NUESTRA HISTORIA ============ -->
+<section class="historia">
+    <div class="container historia-inner">
+        <div class="historia-text">
+            <h2>Nuestra Historia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+        </div>
+        <div class="historia-img">
+            <img src="img/historia.png" alt="Nuestra historia">
+        </div>
+    </div>
+</section>
+
+<!-- ============ MISION Y VISION ============ -->
+<section class="mision-vision">
+    <div class="container mv-grid">
+        <div class="mv-card">
+            <h3>Misión</h3>
+            <div class="mv-icon"><i class="fa-solid fa-pen"></i></div>
+            <p>Brindar una solución integral y universalmente accesible
+            para el cuidado de las mascotas ofreciendo servicios especializados y
+            productos de alta calidad para todo tipo de usuarios. Nos enfocamos
+            al bienestar de sus animales con autonomía, seguridad y empatía.</p>
+        </div>
+        <div class="mv-card">
+            <h3>Visión</h3>
+            <div class="mv-icon"><i class="fa-regular fa-eye"></i></div>
+            <p>Ser la aplicación líder y más exclusiva del mercado
+            global, reconocida por transformar la relación entre
+            humanos y mascotas por medio de la tecnología,
+            brindando accesibilidad y apoyo en el cuidado de las
+            mascotas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ VALORES ============ -->
+<section class="valores">
+    <div class="container">
+        <h2>Valores</h2>
+        <div class="valores-grid">
+
+            <div class="valor-row">
+                <p class="valor-text">Brindar una solución integral y
+                universalmente accesible para el
+                cuidado de las amscotas ofreciendo
+                servicios especializados y productos
+                de alta calidad para todo tipo de
+                usuarios.</p>
+                <div class="valor-circle"></div>
+            </div>
+
+            <div class="valor-row reverse">
+                <p class="valor-text">Brindar una solución integral y
+                universalmente accesible para el
+                cuidado de las amscotas ofreciendo
+                servicios especializados y productos
+                de alta calidad para todo tipo de
+                usuarios.</p>
+                <div class="valor-circle"></div>
+            </div>
+
+            <div class="valor-row">
+                <p class="valor-text">Brindar una solución integral y
+                universalmente accesible para el
+                cuidado de las amscotas ofreciendo
+                servicios especializados y productos
+                de alta calidad para todo tipo de
+                usuarios.</p>
+                <div class="valor-circle"></div>
+            </div>
+
+            <div class="valor-row reverse">
+                <p class="valor-text">Brindar una solución integral y
+                universalmente accesible para el
+                cuidado de las amscotas ofreciendo
+                servicios especializados y productos
+                de alta calidad para todo tipo de
+                usuarios.</p>
+                <div class="valor-circle"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ LANGUAGE MODAL ============ -->
+<div class="custom-modal" id="languageModal">
+    <div class="modal-content-custom">
+        <div class="modal-header-custom">
+            <h5>Seleccionar Idioma</h5>
+            <button class="close-btn" id="closeLanguageModal">&times;</button>
+        </div>
+        <div class="modal-body-custom">
+            <div class="language-options">
+                <button class="lang-option active" data-lang="es" data-flag="https://flagcdn.com/w40/sv.png">
+                    <span class="flag-emoji">🇸🇻</span> Español
+                </button>
+                <button class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                    <span class="flag-emoji">🇬🇧</span> English
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ TOAST CONTAINER ============ -->
+<div id="toastContainer" style="position:fixed; top:90px; right:20px; z-index:3000;"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-petcare">
+    <div class="footer-logo">
+        <img src="./img/logo-paw.png" alt="PetCare">
+    </div>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h5>Cóntactanos</h5>
+            <p>Call Center: 0000-0000</p>
+            <p>"petcare.com" es una marca de ventas registrado.<br>
+            Dirección: Prolongación 59 AV Sur y calle El Progreso 2934.<br>
+            Correo: servicioalcliente@petcare.com.sv<br>
+            NIT: 0614-110169-001-1</p>
+            <p>Derechos Reservados 2026 Petcare S.A de C.V.</p>
+        </div>
+        <div class="footer-col">
+            <h5>Legal</h5>
+            <ul>
+                <li>Uso y condiciones</li>
+                <li>Política de privacidad</li>
+                <li>Derechos y obligaciones de los clientes</li>
+                <li>Garantía de los productos</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Información</h5>
+            <ul>
+                <li>Nosotros</li>
+                <li>Cómo comprar</li>
+                <li>FAQ</li>
+                <li>Contáctenos</li>
+                <li>Sucursales</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Nuestras redes sociales</h5>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
