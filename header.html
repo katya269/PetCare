@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+    <div class="container">
+        <a class="navbar-brand" href="#" data-pc-route="home" aria-label="PetCare - Inicio" data-i18n-aria-label="nav_home">
+            <img class="imgNav" data-pc-asset="logo" alt="Logo PetCare">
+        </a>
+        <form class="d-flex search-form" role="search" data-pc-search-form>
+            <input class="form-control" type="search" placeholder="Buscar..." data-i18n-placeholder="nav_search" aria-label="Buscar productos" data-i18n-aria-label="nav_search">
+        </form>
+        <div class="navbar-nav d-none d-lg-flex">
+            <a class="nav-link" href="#" data-pc-route="home" data-i18n="nav_home">Inicio</a>
+            <a class="nav-link" href="#" data-pc-route="products" data-i18n="nav_products">Productos</a>
+            <a class="nav-link" href="#" data-pc-route="contact" data-i18n="nav_contact">Contacto</a>
+            <a class="nav-link" href="#" data-pc-route="about" data-i18n="aboutus">Quienes Somos</a>
+            <a class="nav-link" href="#" data-pc-route="branches" data-i18n="nav_branches">Sucursales</a>
+            <a class="nav-link" href="#" data-pc-route="favorites" data-i18n="favorites_title">Favoritos</a>
+        </div>
+        <div class="header-icons">
+            <a class="user-icon" href="#" data-pc-route="account" aria-label="Mi cuenta" data-i18n-aria-label="account_settings"><i class="fa-regular fa-circle-user" aria-hidden="true"></i></a>
+            <div class="settings-menu-wrapper">
+                <a class="settings-icon" href="#" data-pc-route="settings" aria-label="Configuración" data-i18n-aria-label="nav_settings"><i class="fa-solid fa-gear" aria-hidden="true"></i></a>
+                <div class="dropdown-menu-custom">
+                    <a href="#" data-pc-route="settings" class="dropdown-item-custom"><i class="fa-solid fa-sliders" aria-hidden="true"></i> <span data-i18n="nav_settings">Configuración</span></a>
+                    <a href="#" class="dropdown-item-custom" id="openLanguageModal"><i class="fa-solid fa-language" aria-hidden="true"></i><span class="me-auto" data-i18n="nav_language">Idioma</span><span id="current-flag" class="current-flag"><img src="https://flagcdn.com/w40/gb.png" alt="UK" class="nav-flag-img"></span></a>
+                    <div class="dropdown-item-custom toggle-container">
+                        <button id="theme-toggle-btn" class="nav-link" type="button" aria-label="Cambiar tema" style="background: none; border: none; cursor: pointer; font-size: 1.2rem;"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+                        <label class="switch"><input type="checkbox" id="darkModeToggle" aria-label="Modo oscuro"><span class="slider round"></span></label>
+                    </div>
+                    <a href="#" data-pc-route="favorites" class="dropdown-item-custom"><i class="fa-solid fa-heart" aria-hidden="true"></i> <span data-i18n="favorites_title">Favoritos</span></a>
+                    <a href="#" data-pc-route="accessibility" class="dropdown-item-custom"><i class="fa-solid fa-universal-access" aria-hidden="true"></i> <span data-i18n="nav_accessibility">Accesibilidad</span></a>
+                </div>
+            </div>
+            <div class="cart-icon position-relative">
+                <a href="#" data-pc-route="cart" aria-label="Carrito de compras" data-i18n-aria-label="cart_title"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i><span class="cart-bubble" aria-label="Productos en carrito" data-i18n-aria-label="cart_title">0</span></a>
+            </div>
+        </div>
+    </div>
+</nav>
